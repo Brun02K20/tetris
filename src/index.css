@@ -22,9 +22,9 @@ h2 {
 
 
 button {
-  padding: 4px;
-  border-radius: 12px;
-  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  color: black;
   background-color: aqua;
   font-size: xx-large;
   cursor: pointer;

@@ -3,6 +3,7 @@ import { Board } from './components/Board.tsx'
 import { useTetris } from './hooks/useTetris.ts'
 import { UpcomingBlocks } from './components/UpcomingBlocks.tsx';
 import { useEffect, useState } from 'react';
+import '@fontsource/press-start-2p';
 
 function App() {
   const { board, startGame, isPlaying, score, upcomingBlocks } = useTetris();
@@ -34,14 +35,16 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>Tetris</h1>
+      <h1 className='text header'>Tetris</h1>
       <Board currentBoard={board} />
       <div className="controls">
-        <h2>Score: {score}</h2>
+        <h2 className='text score'>Score: {score}</h2>
+        <br></br>
+        <br></br>
         {isPlaying ? (
           <UpcomingBlocks upcomingBlocks={upcomingBlocks} />
         ) : (
-          <button onClick={startGame}>New Game</button>
+          <button onClick={startGame} className='text button-start'>New Game</button>
         )}
       </div>
     </div>

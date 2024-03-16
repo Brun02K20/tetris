@@ -1,12 +1,15 @@
 import { Block, SHAPES } from '../types.d';
-
+import "../App.css"
 interface Props {
   upcomingBlocks: Block[];
 }
 
 function UpcomingBlocks({ upcomingBlocks }: Props) {
   return (
-    <div className="upcoming">
+    <div>
+        <br></br>
+        <h1 style={{textAlign: "left"}} className='text'>NEXT</h1>
+        <div className="upcoming">
       {upcomingBlocks.map((block, blockIndex) => {
         const shape = SHAPES[block].shape.filter((row) =>
           row.some((cell) => cell)
@@ -31,6 +34,7 @@ function UpcomingBlocks({ upcomingBlocks }: Props) {
           </div>
         );
       })}
+    </div>
     </div>
   );
 }
